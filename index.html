@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkyFind - Flight Booking</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <nav>
+            <div class="logo">✈ SkyFind</div>
+            <div class="nav-text">Smart Flight Search</div>
+        </nav>
+
+        <main>
+
+            <section class="hero">
+                <p class="small-title">YOUR JOURNEY STARTS HERE</p>
+
+                <h1>Find your next<br>
+                    <span>perfect flight.</span>
+                </h1>
+
+                <p class="description">
+                    Search flights, compare prices and find the best option
+                    for your journey.
+                </p>
+            </section>
+
+
+            <section class="search-card">
+
+                <div class="card-heading">
+                    <h2>Search Flights</h2>
+                    <span>🌍</span>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="input-box">
+                        <label>Destination</label>
+
+                        <input
+                            type="text"
+                            id="destination"
+                            placeholder="e.g. Dubai"
+                        >
+                    </div>
+
+
+                    <div class="input-box">
+                        <label>Travel Date</label>
+
+                        <input
+                            type="date"
+                            id="date"
+                        >
+                    </div>
+
+
+                    <div class="input-box">
+                        <label>Class</label>
+
+                        <select id="flightClass">
+                            <option value="Economy">Economy</option>
+                            <option value="Business">Business</option>
+                            <option value="First Class">First Class</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <button id="searchBtn">
+                    Search Flights ✈
+                </button>
+
+            </section>
+
+
+            <section id="results"></section>
+
+        </main>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
